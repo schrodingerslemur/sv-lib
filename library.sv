@@ -302,14 +302,15 @@ endmodule: Mux2to1
 
 module MagComp
   #(parameter WIDTH = 8)
-  (input  logic [WIDTH-1:0]A, [WIDTH-1:0]B,
+  (input  logic [WIDTH-1:0]A,
+   input  logic [WIDTH-1:0]B,
    output logic AltB, AeqB, AgtB);
-  
+
   always_comb begin
     AltB = 0;
     AeqB = 0;
     AgtB = 0;
-    if (A < B) 
+    if (A < B)
       AltB = 1;
     else if (A == B)
       AeqB = 1;
@@ -321,7 +322,8 @@ endmodule: MagComp
 
 module Comparator
   #(parameter WIDTH = 4)
-  (input  logic [WIDTH-1:0]A, [WIDTH-1:0]B,
+  (input  logic [WIDTH-1:0]A,
+   input  logic [WIDTH-1:0]B,
    output logic AeqB);
 
    always_comb begin
