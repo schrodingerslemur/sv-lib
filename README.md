@@ -2,8 +2,8 @@
 Written in System Verilog
 
 Read files for usage
-1. [library.sv](./library.sv)
-2. [SSegDisplayDriver.sv](./SSegDisplayDriver.sv):
+1. [library.sv](./rtl/library.sv)
+2. [SSegDisplayDriver.sv](./rtl/SSegDisplayDriver.sv):
    ```systemverilog
    // Module header for Boolean Board
      module SSegDisplayDriver (
